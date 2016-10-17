@@ -7,19 +7,15 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.awt.*;
 import java.io.*;
 
 public class Controller extends Component {
 
-
     public TextArea text;
     public String txt;
-   
-
-
-
 
     public void sortit(ActionEvent actionEvent) {
 
@@ -110,6 +106,7 @@ public class Controller extends Component {
 
         String aux="";
         String texto="";
+        String title= "";
 
         try
         {
@@ -119,6 +116,9 @@ public class Controller extends Component {
 
             File abre=file.getSelectedFile();
 
+            title = abre.getName();
+            Stage stage = (Stage)text.getScene().getWindow();
+            stage.setTitle(title);
 
             if(abre!=null)
             {
