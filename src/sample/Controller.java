@@ -16,7 +16,7 @@ public class Controller extends Component {
 
     public TextArea text;
     public String txt;
-    public TextArea titulo;
+   
 
 
 
