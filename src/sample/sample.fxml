@@ -7,97 +7,85 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-   </rowConstraints>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Pane prefHeight="542.0" prefWidth="534.0">
-         <children>
-            <MenuBar layoutX="3.0" layoutY="6.0" prefHeight="29.0" prefWidth="528.0">
-              <menus>
-                <Menu mnemonicParsing="false" text="Fitxer">
-                  <items>
-                    <MenuItem fx:id="sortir" mnemonicParsing="false" onAction="#sortit" text="Sortir" />
-                        <MenuItem fx:id="obrir" mnemonicParsing="false" onAction="#obrir" text="Obrir" />
-                        <MenuItem fx:id="save" mnemonicParsing="false" onAction="#save" text="Guardar" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Editar">
-                  <items>
-                    <MenuItem fx:id="copiar" mnemonicParsing="false" onAction="#copiar" text="Copiar" />
-                        <MenuItem fx:id="tallar" mnemonicParsing="false" onAction="#tallar" text="Tallar" />
-                        <MenuItem fx:id="enganxar" mnemonicParsing="false" onAction="#enganxar" text="Enganxar" />
-                        <MenuItem fx:id="desfer" mnemonicParsing="false" onAction="#desfer" text="Desfer" />
-                  </items>
-                </Menu>
-                  <Menu mnemonicParsing="false" text="Opcions">
-                    <items>
-                        <Menu mnemonicParsing="false" text="Font">
-                          <items>
-                            <MenuItem fx:id="arial" mnemonicParsing="false" onAction="#arial" text="Arial" />
-                              <MenuItem fx:id="serif" mnemonicParsing="false" onAction="#serif" text="Serif" />
-                              <MenuItem fx:id="cmr10" mnemonicParsing="false" onAction="#cmr10" text="cmr10" />
-                          </items>
-                        </Menu>
-                        <Menu mnemonicParsing="false" text="Tamany">
-                          <items>
-                              <MenuItem fx:id="diez" mnemonicParsing="false" onAction="#diez" text="10" />
-                            <MenuItem fx:id="doce" mnemonicParsing="false" onAction="#doce" text="12" />
-                              <MenuItem fx:id="catorce" mnemonicParsing="false" onAction="#catorce" text="14" />
-                          </items>
-                        </Menu>
-                    </items>
+      <MenuBar prefHeight="29.0" prefWidth="528.0" VBox.vgrow="ALWAYS">
+         <menus>
+            <Menu mnemonicParsing="false" text="Fitxer">
+               <items>
+                  <MenuItem fx:id="sortir" mnemonicParsing="false" onAction="#sortit" text="Sortir" />
+                  <MenuItem fx:id="obrir" mnemonicParsing="false" onAction="#obrir" text="Obrir" />
+                  <MenuItem fx:id="save" mnemonicParsing="false" onAction="#save" text="Guardar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Editar">
+               <items>
+                  <MenuItem fx:id="copiar" mnemonicParsing="false" onAction="#copiar" text="Copiar" />
+                  <MenuItem fx:id="tallar" mnemonicParsing="false" onAction="#tallar" text="Tallar" />
+                  <MenuItem fx:id="enganxar" mnemonicParsing="false" onAction="#enganxar" text="Enganxar" />
+                  <MenuItem fx:id="desfer" mnemonicParsing="false" onAction="#desfer" text="Desfer" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Opcions">
+               <items>
+                  <Menu mnemonicParsing="false" text="Font">
+                     <items>
+                        <MenuItem fx:id="arial" mnemonicParsing="false" onAction="#arial" text="Arial" />
+                        <MenuItem fx:id="serif" mnemonicParsing="false" onAction="#serif" text="Serif" />
+                        <MenuItem fx:id="cmr10" mnemonicParsing="false" onAction="#cmr10" text="cmr10" />
+                     </items>
                   </Menu>
-                <Menu mnemonicParsing="false" text="Ajuda">
-                  <items>
-                    <MenuItem fx:id="sobre" mnemonicParsing="false" onAction="#sobre" text="Sobre l'editor" />
-                  </items>
-                </Menu>
-              </menus>
-               <contextMenu>
-                  <ContextMenu>
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                    </items>
-                  </ContextMenu>
-               </contextMenu>
-            </MenuBar>
-            <TextArea fx:id="text" layoutX="3.0" layoutY="69.0" prefHeight="423.0" prefWidth="528.0">
-               <contextMenu>
-                  <ContextMenu>
-                    <items>
-                      <MenuItem fx:id="copy" mnemonicParsing="false" onAction="#copy" text="Copiar" />
-                        <MenuItem fx:id="paste" mnemonicParsing="false" onAction="#paste" text="Pegar" />
-                        <MenuItem fx:id="cut" mnemonicParsing="false" onAction="#cut" text="Tallar" />
-                        <MenuItem fx:id="undo" mnemonicParsing="false" onAction="#undo" text="Desfer" />
-                    </items>
-                  </ContextMenu>
-               </contextMenu>
-            </TextArea>
-            <ToolBar layoutX="3.0" layoutY="35.0" prefHeight="40.0" prefWidth="528.0">
-              <items>
-                <Button fx:id="cop" mnemonicParsing="false" onAction="#cop" text="Copiar" />
-                  <Button fx:id="peg" mnemonicParsing="false" onAction="#peg" text="Pegar" />
-                  <Button fx:id="eng" mnemonicParsing="false" onAction="#eng" text="Tallar" />
-              </items>
-               <contextMenu>
-                  <ContextMenu>
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                    </items>
-                  </ContextMenu>
-               </contextMenu>
-            </ToolBar>
-         </children>
-      </Pane>
+                  <Menu mnemonicParsing="false" text="Tamany">
+                     <items>
+                        <MenuItem fx:id="diez" mnemonicParsing="false" onAction="#diez" text="10" />
+                        <MenuItem fx:id="doce" mnemonicParsing="false" onAction="#doce" text="12" />
+                        <MenuItem fx:id="catorce" mnemonicParsing="false" onAction="#catorce" text="14" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ajuda">
+               <items>
+                  <MenuItem fx:id="sobre" mnemonicParsing="false" onAction="#sobre" text="Sobre l'editor" />
+               </items>
+            </Menu>
+         </menus>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </MenuBar>
+      <ToolBar prefHeight="40.0" prefWidth="528.0">
+         <items>
+            <Button fx:id="cop" mnemonicParsing="false" onAction="#cop" text="Copiar" />
+            <Button fx:id="peg" mnemonicParsing="false" onAction="#peg" text="Pegar" />
+            <Button fx:id="eng" mnemonicParsing="false" onAction="#eng" text="Tallar" />
+         </items>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </ToolBar>
+      <TextArea fx:id="text" prefHeight="423.0" prefWidth="528.0" VBox.vgrow="ALWAYS">
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem fx:id="copy" mnemonicParsing="false" onAction="#copy" text="Copiar" />
+                  <MenuItem fx:id="paste" mnemonicParsing="false" onAction="#paste" text="Pegar" />
+                  <MenuItem fx:id="cut" mnemonicParsing="false" onAction="#cut" text="Tallar" />
+                  <MenuItem fx:id="undo" mnemonicParsing="false" onAction="#undo" text="Desfer" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </TextArea>
    </children>
-</GridPane>
+</VBox>

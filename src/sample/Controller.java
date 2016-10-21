@@ -1,22 +1,34 @@
 package sample;
 
-import javax.swing.*;
-
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.awt.*;
+import java.awt.Button;
 import java.io.*;
 
 public class Controller extends Component {
 
     public TextArea text;
     public String txt;
+    public javafx.scene.control.Button cop;
+    public javafx.scene.control.Button peg;
+    public javafx.scene.control.Button eng;
 
+
+    public void initialize (){
+        cop.setGraphic(new ImageView("copy.png"));
+        peg.setGraphic(new ImageView("paste.png"));
+        eng.setGraphic(new ImageView("cut.png"));
+    }
     public void sortit(ActionEvent actionEvent) {
 
         Platform.exit();
