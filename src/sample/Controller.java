@@ -28,6 +28,7 @@ public class Controller extends Component {
         cop.setGraphic(new ImageView("copy.png"));
         peg.setGraphic(new ImageView("paste.png"));
         eng.setGraphic(new ImageView("cut.png"));
+        
     }
     public void sortit(ActionEvent actionEvent) {
 
